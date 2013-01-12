@@ -99,8 +99,6 @@ static Key keys[] = {
 	{ WINKEY|ControlMask,           XK_f,       setlayout,      {.v = &layouts[2]} },
 	{ WINKEY|ControlMask,           XK_space,   setlayout,      {0} },
 	{ WINKEY,                       XK_space,   togglefloating, {0} },
-	{ MODKEY|ControlMask,           XK_F10,     view,           {.ui = ~0 } },
-	{ WINKEY|ControlMask,           XK_F10,     taG,            {.ui = ~0 } },
 	{ MODKEY,                       XK_comma,   focusmon,       {.i = -1 } },
 	{ MODKEY,                       XK_period,  focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,   tagmon,         {.i = -1 } },

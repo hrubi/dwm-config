@@ -98,8 +98,8 @@ static Key keys[] = {
 	{ WINKEY,                       XK_f,       togglefloating, {0} },
 	{ MODKEY,                       XK_comma,   focusmon,       {.i = -1 } },
 	{ MODKEY,                       XK_period,  focusmon,       {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_comma,   tagmon,         {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_period,  tagmon,         {.i = +1 } },
+	{ WINKEY,                       XK_comma,   tagmon,         {.i = -1 } },
+	{ WINKEY,                       XK_period,  tagmon,         {.i = +1 } },
 	TAGKEYS(                        XK_F1,                      0)
 	TAGKEYS(                        XK_F2,                      1)
 	TAGKEYS(                        XK_F3,                      2)

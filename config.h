@@ -2,6 +2,8 @@
 
 #include "colors.h"
 
+#include "selfrestart.c"
+
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 16;       /* snap pixel */
 static const Bool showbar           = True;     /* False means no bar */
@@ -106,7 +108,8 @@ static Key keys[] = {
 	TAGKEYS(                        XK_F4,                      3)
 	TAGKEYS(                        XK_F5,                      4)
 	TAGKEYS(                        XK_F6,                      5)
-	{ MODKEY|ShiftMask,             XK_q,       quit,           {0} },
+	{ WINKEY|ControlMask,           XK_r,       restart,        {0} },
+	{ WINKEY|ControlMask,           XK_q,       quit,           {0} },
 };
 
 /* button definitions */

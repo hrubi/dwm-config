@@ -4,10 +4,25 @@
 
 #include "selfrestart.c"
 
+static const char font[]            = "-*-terminus-medium-r-normal-*-14-*-*-*-*-*-*-*";
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 16;       /* snap pixel */
 static const Bool showbar           = True;     /* False means no bar */
 static const Bool topbar            = True;     /* False means bottom bar */
+
+static const char* colors[NumColors][ColLast] = {
+	// border          foreground   background
+	{ normbordercolor, normfgcolor, normbgcolor },  // normal
+	{ selbordercolor,  selfgcolor,  selbgcolor  },  // selected
+
+	{ normbordercolor, selbgcolor,  selfgcolor  },  // warning
+	{ normbordercolor, "#ffffff",   "#ff0000"   },  // error
+	{ normbordercolor, "#7598b2",   normbgcolor },  // delim
+
+    { normbordercolor, "#b10000",   normbgcolor },  // hot
+	{ normbordercolor, "#b15c00",   normbgcolor },  // medium
+	{ normbordercolor, "#6cb100",   normbgcolor },  // cool
+};
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6" };

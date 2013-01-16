@@ -1,10 +1,10 @@
 /* See LICENSE file for copyright and license details. */
 
 #include "colors.h"
+#include "font.h"
 
 #include "selfrestart.c"
 
-static const char font[]            = "-*-terminus-medium-r-normal-*-14-*-*-*-*-*-*-*";
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 16;       /* snap pixel */
 static const Bool showbar           = True;     /* False means no bar */

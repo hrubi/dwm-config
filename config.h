@@ -92,6 +92,7 @@ static Key keys[] = {
 	{ WINKEY,                       XK_h,       setmfact,       {.f = -0.05} },
 	{ WINKEY,                       XK_l,       setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_Return,  zoom,           {0} },
+	{ MODKEY,                       XK_KP_Enter,zoom,           {0} },
 	{ MODKEY,                       XK_Escape,  killclient,     {0} },
 	{ WINKEY|ControlMask,           XK_m,       setlayout,      {.v = &layouts[0]} },
 	{ WINKEY|ControlMask,           XK_d,       setlayout,      {.v = &layouts[1]} },

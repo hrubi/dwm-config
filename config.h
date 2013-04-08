@@ -32,12 +32,12 @@ static const Rule rules[] = {
 	{ "feh",      NULL,       NULL,       0,            True,        -1 },
 	{ "MPlayer",  NULL,       NULL,       0,            True,        -1 },
 	{ "Gsimplecal",NULL,      NULL,      ~0,            True,        -1 },
-	{ "Linphone", NULL,       NULL,       2,            True,         1 },
+	{ "Linphone", NULL,       NULL,       0,            True,        -1 },
 	{ "esmska-Main",NULL,     NULL,       0,            True,        -1 },
 	{ "Qjackctl", NULL,       NULL,       0,            True,        -1 },
-	{ "urxvt",    NULL,       "main",     1,            True,         0 },
-	{ "urxvt",    NULL,       "mail",     2,            True,         0 },
-	{ "urxvt",    NULL,       "im",       1,            True,         1 },
+	{ "urxvt",    NULL,       "main",     1,            True,        -1 },
+	{ "urxvt",    NULL,       "mail",     2,            True,        -1 },
+	{ "urxvt",    NULL,       "im",       1,            True,        -1 },
 };
 
 /* layout(s) */

@@ -1,5 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
+#include <X11/XF86keysym.h>
+
 #include "colors.h"
 #include "font.h"
 
@@ -84,7 +86,7 @@ static const char *vol0_upcmd[]         = { "mixer-set.sh", "0", "up", "5", NULL
 static const char *vol0_downcmd[]       = { "mixer-set.sh", "0", "down", "5", NULL };
 static const char *vol1_upcmd[]         = { "mixer-set.sh", "1", "up", "5", NULL };
 static const char *vol1_downcmd[]       = { "mixer-set.sh", "1", "down", "5", NULL };
-//static const char *vol0_togglecmd[]     = { "mixer-set.sh", "toggle", NULL };
+static const char *vol0_togglecmd[]     = { "mixer-set.sh", "0", "toggle", NULL };
 
 static Key keys[] = {
 	/* modifier                     key         function        argument */
@@ -99,6 +101,9 @@ static Key keys[] = {
 	{ WINKEY,                       XK_F7,      spawn,          {.v = mocplaypausecmd } },
 	{ WINKEY,                       XK_F8,      spawn,          {.v = mocprevcmd } },
 	{ WINKEY,                       XK_F9,      spawn,          {.v = mocnextcmd } },
+	{ 0,               XF86XK_AudioMute,        spawn,          {.v = vol0_togglecmd } },
+	{ 0,               XF86XK_AudioLowerVolume, spawn,          {.v = vol0_downcmd } },
+	{ 0,               XF86XK_AudioRaiseVolume, spawn,          {.v = vol0_upcmd } },
 	{ WINKEY|ControlMask,           XK_b,       togglebar,      {0} },
 	{ MODKEY,                       XK_Tab,     focusstack,     {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_Tab,     focusstack,     {.i = -1 } },

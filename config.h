@@ -89,6 +89,9 @@ static const char *vol1_upcmd[]         = { "mixer-set.sh", "1", "up", "5", NULL
 static const char *vol1_downcmd[]       = { "mixer-set.sh", "1", "down", "5", NULL };
 static const char *vol0_togglecmd[]     = { "mixer-set.sh", "0", "toggle", NULL };
 
+static const char *switchdisplay1_cmd[]   = { "switchdisplay.sh", "standalone", NULL };
+static const char *switchdisplay2_cmd[]   = { "switchdisplay.sh", "lcdtop", NULL };
+
 static Key keys[] = {
 	/* modifier                     key         function        argument */
 	{ MODKEY|ControlMask,           XK_x,       spawn,          {.v = dmenucmd } },
@@ -105,6 +108,8 @@ static Key keys[] = {
 	{ 0,               XF86XK_AudioMute,        spawn,          {.v = vol0_togglecmd } },
 	{ 0,               XF86XK_AudioLowerVolume, spawn,          {.v = vol0_downcmd } },
 	{ 0,               XF86XK_AudioRaiseVolume, spawn,          {.v = vol0_upcmd } },
+	{ 0,               XF86XK_WebCam,           spawn,          {.v = switchdisplay1_cmd } },
+	{ 0,               XF86XK_Display,          spawn,          {.v = switchdisplay2_cmd } },
 	{ WINKEY|ControlMask,           XK_b,       togglebar,      {0} },
 	{ MODKEY,                       XK_Tab,     focusstack,     {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_Tab,     focusstack,     {.i = -1 } },

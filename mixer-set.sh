@@ -15,13 +15,7 @@
 CARD="${1}"
 CMD="${2}"
 VAL="${3}"
-MIXER="Speaker"
-
-if [ $CARD = "0" ];then
-    MIXER="Speaker"
-elif [ $CARD = "1" ]; then
-    MIXER="Master"
-fi
+MIXER="Master"
 
 case $CMD in
     up)

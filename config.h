@@ -125,6 +125,9 @@ static Key keys[] = {
 	TAGKEYS(                        XK_F4,                      3)
 	TAGKEYS(                        XK_F5,                      4)
 	TAGKEYS(                        XK_F6,                      5)
+	TAGKEYS(                        XK_F7,                      6)
+	TAGKEYS(                        XK_F8,                      7)
+	TAGKEYS(                        XK_F9,                      8)
 	{ WINKEY|ControlMask,           XK_r,       restart,        {0} },
 	{ WINKEY|ControlMask,           XK_q,       quit,           {0} },
 };

@@ -53,7 +53,7 @@ static const Layout layouts[] = {
 static const char *dmenucmd[]           = { "dmenu_run", "-b", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
 static const char *termcmd[]            = { "urxvt", NULL };
 static const char *calcmd[]             = { "gsimplecal", NULL };
-static const char *lockcmd[]            = { "xscreensaver-command", "-lock", NULL };
+static const char *lockcmd[]            = { "xlock", NULL };
 static const char *browsercmd[]         = { "firefox", NULL };
 
 static const char *mocnextcmd[]         = { "mocp", "-f", NULL };

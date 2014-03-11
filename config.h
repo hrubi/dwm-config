@@ -52,7 +52,6 @@ static const Layout layouts[] = {
 /* commands */
 static const char *dmenucmd[]           = { "dmenu_run", "-b", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
 static const char *termcmd[]            = { "urxvt", NULL };
-static const char *calcmd[]             = { "gsimplecal", NULL };
 static const char *lockcmd[]            = { "xlock", NULL };
 static const char *browsercmd[]         = { "firefox", NULL };
 
@@ -132,7 +131,6 @@ static Button buttons[] = {
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
 	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
-	{ ClkStatusText,        0,              Button1,        spawn,          {.v = calcmd } },
 	{ ClkStatusText,        0,              Button3,        spawn,          {.v = mocplaypausecmd } },
 	{ ClkStatusText,        0,              Button4,        spawn,          {.v = vol0_upcmd } },
 	{ ClkStatusText,        0,              Button5,        spawn,          {.v = vol0_downcmd } },

@@ -63,6 +63,7 @@ static const char *mocplaypausecmd[]    = { "mocp", "-G", NULL };
 static const char *vol0_upcmd[]         = { "mixer-set.sh", "0", "up", "5", NULL };
 static const char *vol0_downcmd[]       = { "mixer-set.sh", "0", "down", "5", NULL };
 static const char *vol0_togglecmd[]     = { "mixer-set.sh", "0", "toggle", NULL };
+static const char *mic0_togglecmd[]     = { "mixer-set.sh", "0", "mic_toggle", NULL };
 
 static const char *bright_up_cmd[]      = { "xbacklight", "-time", "0", "-inc", "10", NULL };
 static const char *bright_down_cmd[]    = { "xbacklight", "-time", "0", "-dec", "10", NULL };
@@ -79,6 +80,7 @@ static Key keys[] = {
 	{ 0,               XF86XK_AudioPlay,        spawn,          {.v = mocplaypausecmd } },
 	{ 0,               XF86XK_AudioPrev,        spawn,          {.v = mocprevcmd } },
 	{ 0,               XF86XK_AudioNext,        spawn,          {.v = mocnextcmd } },
+	{ 0,               XF86XK_AudioMicMute,     spawn,          {.v = mic0_togglecmd } },
 	{ 0,               XF86XK_AudioMute,        spawn,          {.v = vol0_togglecmd } },
 	{ 0,               XF86XK_AudioLowerVolume, spawn,          {.v = vol0_downcmd } },
 	{ 0,               XF86XK_AudioRaiseVolume, spawn,          {.v = vol0_upcmd } },

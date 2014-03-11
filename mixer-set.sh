@@ -16,6 +16,7 @@ CARD="${1}"
 CMD="${2}"
 VAL="${3}"
 MIXER="Master"
+MIC="Capture"
 
 case $CMD in
     up)
@@ -28,6 +29,9 @@ case $CMD in
         ;;
     toggle)
         amixer -c "$CARD" set $MIXER toggle &>/dev/null
+        ;;
+    mic_toggle)
+        amixer -c "$CARD" set $MIC toggle &>/dev/null
         ;;
     *)
         exit 1

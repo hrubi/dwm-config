@@ -60,16 +60,16 @@ static const char *mocnextcmd[]         = { "mocp", "-f", NULL };
 static const char *mocprevcmd[]         = { "mocp", "-r", NULL };
 static const char *mocplaypausecmd[]    = { "mocp", "-G", NULL };
 
-static const char *vol0_upcmd[]         = { "mixer-set.sh", "0", "up", "5", NULL };
-static const char *vol0_downcmd[]       = { "mixer-set.sh", "0", "down", "5", NULL };
-static const char *vol0_togglecmd[]     = { "mixer-set.sh", "0", "toggle", NULL };
-static const char *mic0_togglecmd[]     = { "mixer-set.sh", "0", "mic_toggle", NULL };
+static const char *vol0_upcmd[]         = { "mixer-set", "0", "up", "5", NULL };
+static const char *vol0_downcmd[]       = { "mixer-set", "0", "down", "5", NULL };
+static const char *vol0_togglecmd[]     = { "mixer-set", "0", "toggle", NULL };
+static const char *mic0_togglecmd[]     = { "mixer-set", "0", "mic_toggle", NULL };
 
 static const char *bright_up_cmd[]      = { "xbacklight", "-time", "0", "-inc", "10", NULL };
 static const char *bright_down_cmd[]    = { "xbacklight", "-time", "0", "-dec", "10", NULL };
 
-static const char *switchdisplay1_cmd[] = { "switchdisplay.sh", "standalone", NULL };
-static const char *switchdisplay2_cmd[] = { "switchdisplay.sh", "lcdtop", NULL };
+static const char *switchdisplay1_cmd[] = { "switchdisplay", "standalone", NULL };
+static const char *switchdisplay2_cmd[] = { "switchdisplay", "lcdtop", NULL };
 
 static Key keys[] = {
 	/* modifier                     key         function        argument */

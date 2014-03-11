@@ -71,12 +71,17 @@ static const char *bright_down_cmd[]    = { "xbacklight", "-time", "0", "-dec", 
 static const char *switchdisplay1_cmd[] = { "switchdisplay", "standalone", NULL };
 static const char *switchdisplay2_cmd[] = { "switchdisplay", "lcdtop", NULL };
 
+static const char *touchpad_cmd[] = { "touchpad", NULL };
+static const char *touchscreen_cmd[] = { "touchscreen", NULL };
+
 static Key keys[] = {
 	/* modifier                     key         function        argument */
 	{ MODKEY|ControlMask,           XK_x,       spawn,          {.v = dmenucmd } },
 	{ MODKEY|ControlMask,           XK_Return,  spawn,          {.v = termcmd } },
 	{ MODKEY|ControlMask,           XK_l,       spawn,          {.v = lockcmd } },
 	{ MODKEY|ControlMask,           XK_d,       spawn,          {.v = browsercmd } },
+	{ MODKEY|ControlMask,           XK_s,       spawn,          {.v = touchpad_cmd } },
+	{ MODKEY|ControlMask,           XK_t,       spawn,          {.v = touchscreen_cmd } },
 	{ 0,               XF86XK_AudioPlay,        spawn,          {.v = mocplaypausecmd } },
 	{ 0,               XF86XK_AudioPrev,        spawn,          {.v = mocprevcmd } },
 	{ 0,               XF86XK_AudioNext,        spawn,          {.v = mocnextcmd } },

@@ -12,20 +12,6 @@ static const unsigned int snap      = 16;       /* snap pixel */
 static const Bool showbar           = True;     /* False means no bar */
 static const Bool topbar            = True;     /* False means bottom bar */
 
-static const char* colors[NumColors][ColLast] = {
-	// border          foreground   background
-	{ normbordercolor, normfgcolor, normbgcolor },  // normal
-	{ selbordercolor,  selfgcolor,  selbgcolor  },  // selected
-
-	{ normbordercolor, selbgcolor,  selfgcolor  },  // warning
-	{ normbordercolor, "#ffffff",   "#ff0000"   },  // error
-	{ normbordercolor, "#7598b2",   normbgcolor },  // delim
-
-    { normbordercolor, "#b10000",   normbgcolor },  // hot
-	{ normbordercolor, "#b15c00",   normbgcolor },  // medium
-	{ normbordercolor, "#6cb100",   normbgcolor },  // cool
-};
-
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
@@ -139,7 +125,6 @@ static Button buttons[] = {
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
 	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
-	{ ClkWinTitle,          0,              Button1,        focusonclick,   {0} },
 	{ ClkStatusText,        0,              Button1,        spawn,          {.v = calcmd } },
 	{ ClkStatusText,        0,              Button3,        spawn,          {.v = mocplaypausecmd } },
 	{ ClkStatusText,        0,              Button4,        spawn,          {.v = vol0_upcmd } },

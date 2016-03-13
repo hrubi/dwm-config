@@ -64,9 +64,6 @@ static const char *vol0_downcmd[]       = { "mixer-set", "0", "down", "5", NULL 
 static const char *vol0_togglecmd[]     = { "mixer-set", "0", "toggle", NULL };
 static const char *mic0_togglecmd[]     = { "mixer-set", "0", "mic_toggle", NULL };
 
-static const char *bright_up_cmd[]      = { "xbacklight", "-time", "0", "-inc", "10", NULL };
-static const char *bright_down_cmd[]    = { "xbacklight", "-time", "0", "-dec", "10", NULL };
-
 static const char *screen_off_cmd[]     = { "xset", "dpms", "force", "off", NULL };
 
 static const char *switchdisplay1_cmd[] = { "switchdisplay", "standalone", NULL };
@@ -92,8 +89,6 @@ static Key keys[] = {
 	{ 0,               XF86XK_AudioRaiseVolume, spawn,          {.v = vol0_upcmd } },
 	{ 0,               XF86XK_WebCam,           spawn,          {.v = switchdisplay1_cmd } },
 	{ 0,               XF86XK_Display,          spawn,          {.v = switchdisplay2_cmd } },
-	{ 0,              XF86XK_MonBrightnessUp,   spawn,          {.v = bright_up_cmd } },
-	{ 0,              XF86XK_MonBrightnessDown, spawn,          {.v = bright_down_cmd } },
 	{ 0,              XF86XK_Launch1,           spawn,          {.v = screen_off_cmd } },
 	{ WINKEY|ControlMask,           XK_b,       togglebar,      {0} },
 	{ MODKEY,                       XK_Tab,     focusstack,     {.i = +1 } },
